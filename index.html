@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Krishi Sampada</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi Sampada - Education Made Simple</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="book-animation">
+                <div class="book">
+                    <div class="page page1"></div>
+                    <div class="page page2"></div>
+                    <div class="page page3"></div>
+                </div>
+            </div>
+            <h2>Welcome to Krishi Sampada</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Krishi Sampada</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#subjects" class="nav-link">Subjects</a></li>
+                <li><a href="#ai-assistant" class="nav-link">AI Helper</a></li>
+                <li><a href="#progress" class="nav-link">Progress</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape1"></div>
+                <div class="shape shape2"></div>
+                <div class="shape shape3"></div>
+                <div class="shape shape4"></div>
+                <div class="shape shape5"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Learning Never</span>
+                    <span class="title-line">Gets Old</span>
+                </h1>
+                <p class="hero-subtitle">Discover the joy of learning with our specially designed courses for seniors. From basic reading to advanced subjects, we're here to guide you every step of the way.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('subjects')">
+                        <i class="fas fa-play"></i>
+                        Start Learning
+                    </button>
+                    <button class="btn btn-secondary" onclick="openAIAssistant()">
+                        <i class="fas fa-robot"></i>
+                        Ask AI Helper
+                    </button>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="learning-scene">
+                    <div class="student-avatar">
+                        <div class="avatar-head"></div>
+                        <div class="avatar-body"></div>
+                        <div class="glasses"></div>
+                    </div>
+                    <div class="floating-books">
+                        <div class="book book1">📚</div>
+                        <div class="book book2">📖</div>
+                        <div class="book book3">📝</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section id="subjects" class="subjects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Learning Path</h2>
+                <p class="section-subtitle">Four comprehensive subjects designed with care for senior learners</p>
+            </div>
+            
+            <div class="subjects-grid">
+                <!-- Mathematics -->
+                <div class="subject-card" data-subject="math">
+                    <div class="card-header">
+                        <div class="subject-icon math-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Mathematics</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>From basic counting to everyday calculations</p>
+                        <ul class="topic-list">
+                            <li>Basic Numbers & Counting</li>
+                            <li>Addition & Subtraction</li>
+                            <li>Money Management</li>
+                            <li>Time & Measurements</li>
+                        </ul>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="openSubject('math')">
+                        <span>Start Learning</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Science -->
+                <div class="subject-card" data-subject="science">
+                    <div class="card-header">
+                        <div class="subject-icon science-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Science</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Explore the wonders of the world around us</p>
+                        <ul class="topic-list">
+                            <li>Human Body Basics</li>
+                            <li>Nature & Environment</li>
+                            <li>Health & Nutrition</li>
+                            <li>Simple Experiments</li>
+                        </ul>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="openSubject('science')">
+                        <span>Start Learning</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- English -->
+                <div class="subject-card" data-subject="english">
+                    <div class="card-header">
+                        <div class="subject-icon english-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>English</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Master reading, writing, and communication</p>
+                        <ul class="topic-list">
+                            <li>Alphabet & Phonics</li>
+                            <li>Basic Vocabulary</li>
+                            <li>Simple Sentences</li>
+                            <li>Reading Practice</li>
+                        </ul>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="openSubject('english')">
+                        <span>Start Learning</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Hindi -->
+                <div class="subject-card" data-subject="hindi">
+                    <div class="card-header">
+                        <div class="subject-icon hindi-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>हिंदी (Hindi)</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Learn Hindi reading and writing</p>
+                        <ul class="topic-list">
+                            <li>देवनागरी लिपि (Devanagari Script)</li>
+                            <li>स्वर और व्यंजन (Vowels & Consonants)</li>
+                            <li>शब्द निर्माण (Word Formation)</li>
+                            <li>सरल वाक्य (Simple Sentences)</li>
+                        </ul>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="openSubject('hindi')">
+                        <span>Start Learning</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Modal -->
+    <div id="learning-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Subject Learning</h3>
+                <button class="close-btn" onclick="closeLearningModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="lesson-container">
+                    <div class="lesson-sidebar">
+                        <h4>Lessons</h4>
+                        <ul id="lesson-list" class="lesson-list">
+                            <!-- Lessons will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="lesson-content">
+                        <div id="lesson-display" class="lesson-display">
+                            <!-- Lesson content will be displayed here -->
+                        </div>
+                        <div class="lesson-controls">
+                            <button class="btn btn-secondary" onclick="previousLesson()">
+                                <i class="fas fa-chevron-left"></i>
+                                Previous
+                            </button>
+                            <button class="btn btn-primary" onclick="nextLesson()">
+                                Next
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Assistant Section -->
+    <section id="ai-assistant" class="ai-section">
+        <div class="container">
+            <div class="ai-header">
+                <div class="ai-avatar">
+                    <div class="avatar-circle">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="pulse-ring"></div>
+                </div>
+                <h2>Meet Your AI Learning Assistant</h2>
+                <p>Ask me anything about your studies. I'm here to help you learn and understand better!</p>
+            </div>
+            
+            <div class="ai-chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message ai-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm your AI learning assistant. Feel free to ask me questions about Mathematics, Science, English, or Hindi. I'm here to help you learn!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="input-group">
+                        <input type="text" id="user-input" placeholder="Ask me anything about your studies..." maxlength="500">
+                        <button id="send-btn" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="quick-questions">
+                        <span>Quick questions:</span>
+                        <button class="quick-btn" onclick="askQuickQuestion('How do I add numbers?')">How do I add numbers?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('What is photosynthesis?')">What is photosynthesis?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('How to read English words?')">How to read English words?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress" class="progress-section">
+        <div class="container">
+            <h2 class="section-title">Your Learning Journey</h2>
+            <div class="progress-dashboard">
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="total-lessons">0</h3>
+                            <p>Lessons Completed</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="study-time">0</h3>
+                            <p>Minutes Studied</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="achievements">0</h3>
+                            <p>Achievements</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subject-progress">
+                    <h3>Subject Progress</h3>
+                    <div class="progress-bars">
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <span class="subject-name">Mathematics</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill math-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <span class="subject-name">Science</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill science-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <span class="subject-name">English</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill english-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <span class="subject-name">Hindi</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill hindi-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Settings</h3>
+                <button class="close-btn" onclick="closeSettingsModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h4>AI Assistant Settings</h4>
+                    <div class="setting-item">
+                        <label for="api-key">Gemini API Key:</label>
+                        <input type="password" id="api-key" placeholder="Enter your Gemini API key" value="AIzaSyCW07q0dZoD7CiEipdEMqDRrsAAOiTfXro">
+                        <small>Your API key is stored locally and never shared</small>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h4>Display Settings</h4>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="large-text"> Large Text Mode
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="high-contrast"> High Contrast Mode
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+  
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Krishi Sampada</h4>
+                    <p>Empowering seniors through education and technology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#subjects">Subjects</a></li>
+                        <li><a href="#ai-assistant">AI Helper</a></li>
+                        <li><a href="#progress">Progress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Need help? Our AI assistant is always ready to help you learn!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Krishi Sampada. Made with ❤️ for lifelong learners.</p>
+            </div>
+        </div>
+    </footer>
+#contact
+    <script src="script.js"></script>
+<section id="contact" class="contact-section fade-in" tabindex="20" aria-label="Contact section">
+  <div class="section-header">
+    <span class="section-badge">Get In Touch</span>
+    <h2 class="slide-down">Contact <span class="highlight">Us</span></h2>
+    <p class="section-description">Have questions or suggestions? We'd love to hear from you!</p>
+  </div>
+<<form id="contactForm" method="POST" action="https://api.web3forms.com/submit">
+  <input type="hidden" name="access_key" value="3618c8f4-4639-424b-a900-546236c0cbdc" />
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required />
+  </div>
+  <div class="form-group">
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required />
+  </div>
+  <div class="form-group">
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
+  <button type="submit">Send</button>
+  <div id="form-status"></div>
+</form>
+  
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
